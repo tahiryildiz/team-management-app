@@ -56,10 +56,10 @@ const Members: React.FC = () => {
     }
   };
 
-  const handleEdit = (member: Member) => {
+  const handleEditMember = (member: Member) => {
     setEditingMember(member);
     setNewMemberName(member.name);
-    setNewMemberEmail(member.email);
+    setNewMemberEmail(member.email || ''); // Add a fallback empty string
     setNewMemberDepartmentId(member.departmentId);
   };
 
@@ -110,7 +110,7 @@ const Members: React.FC = () => {
               </div>
               <div>
                 <button
-                  onClick={() => handleEdit(member)}
+                  onClick={() => handleEditMember(member)}
                   className="mr-2 text-blue-500"
                 >
                   Edit
