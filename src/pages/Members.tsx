@@ -59,7 +59,7 @@ const Members: React.FC = () => {
   const handleEdit = (member: Member) => {
     setEditingMember(member);
     setNewMemberName(member.name);
-    setNewMemberEmail(member.email || ''); // Handle possible undefined email
+    setNewMemberEmail(member.email);
     setNewMemberDepartmentId(member.departmentId);
   };
 
